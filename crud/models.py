@@ -9,8 +9,5 @@ class Usuario(models.Model):
     domicilio = models.CharField(max_length=200)
     nacimiento = models.DateField()
     created_date = models.DateTimeField(default=timezone.now)
-    def publish(self):
-        self.published_date = timezone.now()
-        self.save()
     def __str__(self):
         return self.apellido+" "+self.nombre

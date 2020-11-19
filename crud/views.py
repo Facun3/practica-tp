@@ -17,7 +17,6 @@ def usuario_new(request):
         form = UsuarioForm(request.POST)
         if form.is_valid():
             usuario = form.save(commit=False)
-            usuario.published_date = timezone.now()
             usuario.save()
             return redirect('usuario_detail', pk=usuario.pk)
     else:
@@ -30,7 +29,6 @@ def usuario_edit(request, pk):
         form = UsuarioForm(request.POST, instance=usuario)
         if form.is_valid():
             usuario = form.save(commit=False)
-            usuario.published_date = timezone.now()
             usuario.save()
             return redirect('usuario_detail', pk=usuario.pk)
     else:
