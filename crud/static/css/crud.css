@@ -1,0 +1,78 @@
+
+body {
+    padding-left: 15px;
+}
+
+/* Para editar el formulario de agregado */
+.formulario{
+    margin: auto;
+    width: 25%;
+}
+.post-form textarea, .post-form input {
+    width: 100%;
+    height: auto;
+}
+
+/* Para configurar header */
+.page-header {
+    background-color: #828282;
+    margin-top: 0;
+    padding: 20px 20px 20px 40px;
+}
+.top-menu, .top-menu:hover, .top-menu:visited {
+    color: white;
+    float: right;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 26pt;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+
+/* Para configurar tablas */
+table.darkTable {
+    font-family: "Times New Roman", Times, serif;
+    border: 2px solid #000000;
+    background-color: #4A4A4A;
+    width: 80%;
+    height: 200px;
+    margin: auto;
+    text-align: center;
+    border-collapse: collapse;
+
+}
+  table.darkTable td, table.darkTable th {
+    border: 3px solid #4A4A4A;
+    padding: 3px 2px;
+  }
+  table.darkTable tbody td {
+    font-size: 21px;
+    color: #E6E6E6;
+  }
+  table.darkTable tr:nth-child(even) {
+    background: #888888;
+  }
+  table.darkTable thead {
+    background: #000000;
+    border-bottom: 3px solid white;
+  }
+  table.darkTable tr th {
+    font-size: 20px;
+    font-weight: bold;
+    color: #E6E6E6;
+    text-align: center;
+    border-left: 2px solid #4A4A4A;
+  }
+  table.darkTable thead th:first-child {
+    border-left: none;
+  }
+  
+  /* para los botones */
+  a{
+      color: white;
+  }
+  .tablecontainer{
+      width:80%;
+  }
+  .btn{
+      float: right;
+  }

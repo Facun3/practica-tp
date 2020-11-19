@@ -1,0 +1,18 @@
+{% extends 'crud/base.html' %}
+
+{% block content %}
+    <table class="darkTable">
+    <tr>
+        <th scope="col" colspan="4">Usuarios registrados</th>
+    </tr>
+    {% for post in posts %}
+    <tr>
+        <td>{{ post.apellido }} {{post.nombre}}</td>
+        <td><a href="{% url 'usuario_detail' pk=post.pk %}"> Detalles</a></td>
+        {% if user.is_authenticated %}
+            <td><a href="{% url 'usuario_delete' pk=post.pk %}" onClick="return confirm('¿Seguro que quieres borrar a este usuario?');"> Borrar</a></td>
+        {% endif %}
+    </tr>
+    {% endfor%}
+    </table>
+{% endblock %}

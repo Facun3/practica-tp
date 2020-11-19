@@ -1,0 +1,27 @@
+{% extends 'crud/base.html' %}
+
+{% block content %}
+    <div class="tablecontainer">
+        <table class="darkTable">
+            <tr>
+                <th>Apellido</th>
+                <th>Nombre</th>
+                <th>DNI</th>
+                <th>Domicilio</th>
+                <th>Fecha Nacimiento</th>
+                <th>Creacion</th>
+            </tr>
+            <tr>
+                <td>{{post.apellido}}</td>
+                <td>{{post.nombre}}</td>
+                <td>{{post.dni}}</td>
+                <td>{{post.domicilio}}</td>
+                <td>{{post.nacimiento}}</td>
+                <td>{{post.created_date}}</td>
+            </tr>
+        </table>
+        {% if user.is_authenticated %}
+            <a class="btn btn-default" href="{% url 'usuario_edit' pk=post.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
+        {% endif %}
+    </div>
+{% endblock content %}

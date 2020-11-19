@@ -1,0 +1,24 @@
+{% load static %}
+<html>
+    <head>
+        <title>Practico Final Practica1</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="{% static 'css/crud.css' %}">
+    </head>
+    <body>
+        <div class="page-header">
+            {% if user.is_authenticated %}
+                <a href="{% url 'usuario_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+            {% else %}
+                <a href="/admin" class="top-menu">Loguearse</a>
+            {% endif %}
+            {% block title%}
+                <h1><a href="/">CRUD</a></h1>
+            {% endblock %}
+        </div>
+        {% block content %}
+        {% endblock %}
+        
+    </body>
+</html>
