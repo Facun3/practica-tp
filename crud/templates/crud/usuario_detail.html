@@ -12,16 +12,16 @@
                 <th>Creacion</th>
             </tr>
             <tr>
-                <td>{{post.apellido}}</td>
-                <td>{{post.nombre}}</td>
-                <td>{{post.dni}}</td>
-                <td>{{post.domicilio}}</td>
-                <td>{{post.nacimiento}}</td>
-                <td>{{post.created_date}}</td>
+                <td>{{usuario.apellido}}</td>
+                <td>{{usuario.nombre}}</td>
+                <td>{{usuario.dni}}</td>
+                <td>{{usuario.domicilio}}</td>
+                <td>{{usuario.nacimiento}}</td>
+                <td>{{usuario.created_date}}</td>
             </tr>
         </table>
         {% if user.is_authenticated %}
-            <a class="btn btn-default" href="{% url 'usuario_edit' pk=post.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a class="btn btn-default" href="{% url 'usuario_edit' pk=usuario.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
         {% endif %}
     </div>
 {% endblock content %}
